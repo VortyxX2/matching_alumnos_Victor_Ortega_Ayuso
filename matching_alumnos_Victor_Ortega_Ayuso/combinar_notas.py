@@ -25,7 +25,6 @@ except Exception as e:
     exit()
 
 try:
-    # --- CAMBIO AQUÍ ---
     with open(file_uf2, mode='r', encoding='latin-1') as f:
         reader = csv.DictReader(f, delimiter=';')
         
@@ -59,4 +58,5 @@ try:
 except PermissionError:
     print(f"Error: No tienes permisos para escribir en '{output_file}'.")
 except Exception as e:
+
     print(f"Error inesperado al escribir {output_file}: {e}")
